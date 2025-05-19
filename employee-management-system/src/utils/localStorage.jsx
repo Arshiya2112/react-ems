@@ -1,0 +1,248 @@
+const employees = [
+  {
+    id: 1,
+    email: "employee1@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        title: "Design Landing Page",
+        description:
+          "Create wireframes and design mockups for the landing page.",
+        date: "2025-05-20",
+        category: "Design",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Update Resume",
+        description: "Revise and submit updated resume to HR.",
+        date: "2025-05-10",
+        category: "HR",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        title: "Submit Weekly Report",
+        description: "Report submission was missed due to system failure.",
+        date: "2025-05-17",
+        category: "Reporting",
+      },
+    ],
+  },
+  {
+    id: 2,
+    email: "employee2@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        title: "Code Review",
+        description: "Review PR #2045 and leave comments.",
+        date: "2025-05-18",
+        category: "Development",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Client Demo",
+        description: "Prepare and present demo to client.",
+        date: "2025-05-16",
+        category: "Client",
+      },
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        title: "Database Backup",
+        description: "Backup database before migration.",
+        date: "2025-05-19",
+        category: "DevOps",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Team Meeting",
+        description: "Monthly sync-up with the development team.",
+        date: "2025-05-15",
+        category: "Team",
+      },
+    ],
+  },
+  {
+    id: 3,
+    email: "employee3@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        title: "Bug Fixing",
+        description: "Fix login redirect issue on production.",
+        date: "2025-05-18",
+        category: "Development",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Attend Workshop",
+        description: "Join frontend best practices workshop.",
+        date: "2025-05-13",
+        category: "Training",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        title: "Setup CI/CD",
+        description: "CI/CD setup failed due to permission issues.",
+        date: "2025-05-14",
+        category: "DevOps",
+      },
+    ],
+  },
+  {
+    id: 4,
+    email: "employee4@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Write Unit Tests",
+        description: "Increase test coverage for cart module.",
+        date: "2025-05-16",
+        category: "Testing",
+      },
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        title: "Optimize Images",
+        description: "Compress and optimize all product images.",
+        date: "2025-05-19",
+        category: "Performance",
+      },
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        title: "SEO Audit",
+        description: "Run an SEO audit for the homepage.",
+        date: "2025-05-20",
+        category: "Marketing",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        title: "Deploy Patch",
+        description: "Deployment failed due to CI issue.",
+        date: "2025-05-17",
+        category: "Deployment",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Mentor Intern",
+        description: "Guide intern with onboarding tasks.",
+        date: "2025-05-14",
+        category: "Mentorship",
+      },
+    ],
+  },
+  {
+    id: 5,
+    email: "employee5@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        title: "Refactor Codebase",
+        description: "Refactor legacy code for maintainability.",
+        date: "2025-05-18",
+        category: "Development",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        title: "Push Hotfix",
+        description: "Hotfix failed to push to production.",
+        date: "2025-05-16",
+        category: "Urgent",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Organize Files",
+        description: "Clean up and organize shared drives.",
+        date: "2025-05-15",
+        category: "Admin",
+      },
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        title: "Write Blog Post",
+        description:
+          "Draft internal tech blog about authentication strategies.",
+        date: "2025-05-21",
+        category: "Content",
+      },
+    ],
+  },
+];
+
+const admin = [
+  {
+    id: 1,
+    email: "admin@example.com",
+    password: "123",
+  },
+];
+
+export const setLocalStorage = () => {
+  localStorage.setItem("employees", JSON.stringify(employees));
+  localStorage.setItem("admin", JSON.stringify(admin));
+};
+export const getLocalStorage = () => {
+  const employees = JSON.parse(localStorage.getItem("employees"));
+  const admin = JSON.parse(localStorage.getItem('admin'));
+
+  return {employees, admin}
+};

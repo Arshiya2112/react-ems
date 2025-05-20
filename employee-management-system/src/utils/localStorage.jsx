@@ -1,6 +1,9 @@
+localStorage.clear()
+
 const employees = [
   {
     id: 1,
+    firstname: "Arjun",
     email: "employee1@example.com",
     password: "123",
     tasks: [
@@ -10,8 +13,7 @@ const employees = [
         completed: false,
         failed: false,
         title: "Design Landing Page",
-        description:
-          "Create wireframes and design mockups for the landing page.",
+        description: "Create wireframes and design mockups for the landing page.",
         date: "2025-05-20",
         category: "Design",
       },
@@ -36,9 +38,16 @@ const employees = [
         category: "Reporting",
       },
     ],
+    taskNumbers: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 1,
+    },
   },
   {
     id: 2,
+    firstname: "Sneha",
     email: "employee2@example.com",
     password: "123",
     tasks: [
@@ -83,9 +92,16 @@ const employees = [
         category: "Team",
       },
     ],
+    taskNumbers: {
+      active: 2,
+      newTask: 1,
+      completed: 2,
+      failed: 0,
+    },
   },
   {
     id: 3,
+    firstname: "Ravi",
     email: "employee3@example.com",
     password: "123",
     tasks: [
@@ -120,9 +136,16 @@ const employees = [
         category: "DevOps",
       },
     ],
+    taskNumbers: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 1,
+    },
   },
   {
     id: 4,
+    firstname: "Priya",
     email: "employee4@example.com",
     password: "123",
     tasks: [
@@ -177,9 +200,16 @@ const employees = [
         category: "Mentorship",
       },
     ],
+    taskNumbers: {
+      active: 2,
+      newTask: 1,
+      completed: 2,
+      failed: 1,
+    },
   },
   {
     id: 5,
+    firstname: "Kiran",
     email: "employee5@example.com",
     password: "123",
     tasks: [
@@ -219,18 +249,24 @@ const employees = [
         completed: false,
         failed: false,
         title: "Write Blog Post",
-        description:
-          "Draft internal tech blog about authentication strategies.",
+        description: "Draft internal tech blog about authentication strategies.",
         date: "2025-05-21",
         category: "Content",
       },
     ],
+    taskNumbers: {
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 1,
+    },
   },
 ];
 
 const admin = [
   {
     id: 1,
+    firstname: "Vikram",
     email: "admin@example.com",
     password: "123",
   },
@@ -240,9 +276,9 @@ export const setLocalStorage = () => {
   localStorage.setItem("employees", JSON.stringify(employees));
   localStorage.setItem("admin", JSON.stringify(admin));
 };
+
 export const getLocalStorage = () => {
   const employees = JSON.parse(localStorage.getItem("employees"));
-  const admin = JSON.parse(localStorage.getItem('admin'));
-
-  return {employees, admin}
+  const admin = JSON.parse(localStorage.getItem("admin"));
+  return { employees, admin };
 };

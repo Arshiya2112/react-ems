@@ -261,6 +261,50 @@ const employees = [
       failed: 1,
     },
   },
+  {
+    id: 6,
+    firstname: "Abhishek",
+    email: "employee6@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        title: "Design Landing Page",
+        description: "Create wireframes and design mockups for the landing page.",
+        date: "2025-05-20",
+        category: "Design",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Update Resume",
+        description: "Revise and submit updated resume to HR.",
+        date: "2025-05-10",
+        category: "HR",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        title: "Submit Weekly Report",
+        description: "Report submission was missed due to system failure.",
+        date: "2025-05-17",
+        category: "Reporting",
+      },
+    ],
+    taskNumbers: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 1,
+    },
+  },
 ];
 
 const admin = [

@@ -8,7 +8,7 @@ const AcceptTask = ({data}) => {
           <h4 className="text-sm">{data.date}</h4>
         </div>
         <h2 className="mt-5 text-2xl font-semibold text-white">{data.title}</h2>
-        <p className="text-sm mt-2 text-white">
+        <p className="text-sm mt-2 text-black">
             {data.description}
         </p>
         <div className='flex justify-between mt-4'>
